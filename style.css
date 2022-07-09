@@ -1,0 +1,19 @@
+#app {
+  margin: auto;
+  width: 90vw;
+  height: 100vh;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: center;
+}
+
+#beginQuery
+{
+
+}
+
+#query
+{
+  display: block;
+  text-align: center;
+}

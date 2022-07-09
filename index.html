@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staples Sales Tool</title>
+  </head>
+
+ 
+  <body>
+    <div id="app">
+
+      <button onclick="revealSearch()" id="beginQuery">Begin Query</button>
+
+      <div id="query">
+
+        <form id="queryForm">
+          Tech Type: <select id="techType">
+            <option value="laptop">Laptop</option>
+            <option value="desktop">Desktop</option>
+            <option value="printers">Printers</option>
+            <option value="shredders">Shredders</option>
+            <option value="servers">Servers</option>
+            <option value="other">Other Electronics</option>
+          </select>
+        </form>
+        
+      <div>
+        <label>Price</label>
+        <input type="number" pattern="\d*" id="price"  min="1" max="1,000,000">
+      </div>
+        
+      <button onclick="search()" id="search">Search</button>
+
+
+      </div>
+      
+
+    </div>
+    
+
+    <template id="repairPlan">
+      <h2>Repair Plans (ECP)</h2>
+      <text id="Yr1"> Place Holder</text>
+      <text id="Yr2"> Place Holder</text>
+
+      <h3>Accidental Plan (One Time)</h3>
+      <text id="rYr2">Place Holder</text>
+      <text id="rYr3">Place Holder</text>
+
+      <h3>Data Recovery (One Time)</h3>
+      <text id="dYr2">Place Holder</text>
+      <text id="dYr3">Place Holder</text>
+
+  </template>
+
+  </body>
+ 
+  
+</html>
+<script type ="text/javascript" src="/main.js"></script>
