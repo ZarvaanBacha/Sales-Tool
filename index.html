@@ -11,9 +11,6 @@
  
   <body>
     <div id="app">
-
-      <button onclick="revealSearch()" id="beginQuery">Begin Query</button>
-
       <div id="query">
 
         <form id="queryForm">
@@ -23,16 +20,22 @@
             <option value="printers">Printers</option>
             <option value="shredders">Shredders</option>
             <option value="servers">Servers</option>
+            <option value="mobilePhones">Mobile Phones</option>
+            <option value="tablets">Tablets</option>
             <option value="other">Other Electronics</option>
           </select>
         </form>
         
       <div>
         <label>Price</label>
-        <input type="number" pattern="\d*" id="price"  min="1" max="1,000,000">
+        <input inputmode="decimal" id="price"  min="0" max="1,000,000">
       </div>
         
       <button onclick="search()" id="search">Search</button>
+
+      <div id="data">
+
+      </div>
 
 
       </div>
@@ -40,6 +43,12 @@
 
     </div>
     
+
+    <template id="repairPlanECP+">
+      <h2>Repair Plans (ECP Plus)</h2>
+      <text id="plus"> Place Holder</text>
+      <text id="plus_accidental"> Place Holder</text>
+    </template>
 
     <template id="repairPlan">
       <h2>Repair Plans (ECP)</h2>
@@ -55,6 +64,32 @@
       <text id="dYr3">Place Holder</text>
 
   </template>
+
+  <template id="repairPlan2">
+    <h2>Repair Plans (ECP)</h2>
+    <text id="Yr1"> Place Holder</text>
+    <text id="Yr2"> Place Holder</text>
+
+    <h3>Accidental Plan (One Time)</h3>
+    <text id="rYr2">Place Holder</text>
+    <text id="rYr3">Place Holder</text>
+
+</template>
+
+<template id="replacement">
+  <h2>Replacement Plans (ECP)</h2>
+  <text id="Yr"> Place Holder</text>
+
+  <h3>Accidental Plan (One Time)</h3>
+  <text id="rYr">Place Holder</text>
+
+</template>
+
+<template id="replacement2">
+  <h2>Replacement Plans (ECP)</h2>
+  <text id="Yr"> Place Holder</text>
+
+</template>
 
   </body>
   <script src="./main.js"></script>
