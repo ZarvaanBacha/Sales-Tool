@@ -1,0 +1,11 @@
+{
+    "plans": 
+        {
+            "R1" : {"low": 0, "high": 249.99, "plus": 4.50, "plus_accidental": 6.25},
+            "R2" : {"low": 250, "high": 349.99, "plus": 6.00, "plus_accidental": 8.00},
+            "R3" : {"low": 350, "high": 499.99, "plus": 8.00, "plus_accidental": 10.00},
+            "R4" : {"low": 500, "high": 999.99, "plus": 13.00, "plus_accidental": 17.00},
+            "R5" : {"low": 1000, "high": 1000000, "plus": 18.00, "plus_accidental": 24.50}
+
+        }
+}
