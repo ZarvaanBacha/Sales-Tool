@@ -249,6 +249,42 @@ function printerShredderServer(price)
           } 
         }
       });
+  
+      fetch('./Database/ecp-other,replacement.json').then(response => response.json())
+  .then(jsondata => 
+      {
+        
+        // Search for reaplacement plan that fits price
+        for (var i = 0; i < Object.keys(jsondata.plans).length; i++)
+        { 
+          var info = Object.keys(jsondata.plans)[i];
+          var data = jsondata.plans[info];
+          
+          if (price >= data["low"] && price <= data["high"])
+          {
+            var temp = document.getElementById("replacement");
+            var clon = temp.content.cloneNode(true);
+            document.getElementById("data").appendChild(clon);
+
+            document.getElementById("Yr").innerHTML = "1-Year Plan: " + "$" + data["1yr"];
+            break;
+          } 
+        }
+
+        // Search for Accidental Plan that fits price
+        for (var i = 0; i < Object.keys(jsondata.accidental).length; i++)
+        { 
+          var info = Object.keys(jsondata.accidental)[i];
+          var data = jsondata.accidental[info];
+          
+          if (price >= data["low"] && price <= data["high"])
+          {
+            document.getElementById("rYr").innerHTML = "2-Year Plan: " + "$" + data["2yr"];
+            break;
+          } 
+        }
+
+      });  
 
      
 }
@@ -375,7 +411,7 @@ function other(price)
             var clon = temp.content.cloneNode(true);
             document.getElementById("data").appendChild(clon);
 
-            document.getElementById("Yr").innerHTML = "1-Year Plan: " + "$" + data["yr"];
+            document.getElementById("Yr").innerHTML = "1-Year Plan: " + "$" + data["1yr"];
             break;
           } 
         }
